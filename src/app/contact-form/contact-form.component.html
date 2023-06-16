@@ -1,0 +1,63 @@
+
+    <div id="contact">
+        <div class="conatainer">
+            <div class="row">
+                <div class=" contact-left col-4">
+                    <h1 class="sub-title p-4">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>Pankajsati@official@gmail.com</p>
+                    <p><i class="fa-solid fa-mobile-screen"></i>7088681531</p>
+                    <div class="social-icons">
+                        <a href=""  target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""  target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""  target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://stackoverflow.name/pankaj-sati" target="_blank"><i class="fa-brands fa-stack-overflow"></i></a>
+                        <a href="https://github.com/pankajsati786"  target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <div id="cvSection">
+                        <a href="assets/Pankaj_Sati_Resume_05-05-2022-18-37-34.pdf" download class="bttn bttn2"><i class="fa-solid fa-file-pdf"></i> Download CV</a>
+                    </div>
+                   
+                </div>
+                <div class="contact-right col-6 ">
+                    <form  #contactmeForm="ngForm" (ngSubmit)="getuserDetails(contactmeForm.value);contactmeForm.reset();" >
+                        <div class="form-outline mb-4">
+                            <label for="">name</label>
+                            <input class="form-control" type="text" required pattern="[A-Z a-z]*" required #name="ngModel" name="Name" placeholder="Enter Your Name" ngModel>
+                            <span class="text-danger"*ngIf="name.invalid && name.touched">
+                                <ng-container *ngIf="name.errors?.['required']">
+                                    Please enter your name.
+                                  </ng-container>
+                                  <ng-container *ngIf="name.errors?.['pattern'] && !name.errors?.['required']">
+                                    Please enter a valid name (only alphabets and spaces allowed).
+                                  </ng-container>
+                            </span> 
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label for="">Email</label>
+                            <input class="form-control" type="text" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"  required #email="ngModel" name="Email" placeholder="Enter Your Email" ngModel>
+                            <span class="text-danger" *ngIf="email.invalid && email.touched">
+                                <ng-container *ngIf="email.errors?.['required']">
+                                    Please enter your Email.
+                                  </ng-container>
+                                  <ng-container *ngIf="email.errors?.['pattern'] && !email.errors?.['required']">
+                                    Please enter a valid Email
+                                  </ng-container>
+                            </span>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label for="">Message</label>
+                            <textarea class="form-control" name="" required #message="ngModel" name="Message" cols="15" rows="6" placeholder="Enter your message" ngModel></textarea>
+                            <span class="text-danger" *ngIf="message.invalid && message.touched"> Mesaage cannot Blank</span>
+                        </div>
+                        <div class="submitButton">
+                            <button type="submit"[disabled]="!contactmeForm.valid" class="bttn bttn2">Submit</button>
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+

@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color:#010101;
+    overflow-x: hidden;
+}
+.copyRight
+{
+    width:100%;
+text-align: center;
+color:white;
+padding:25px 0;
+background:#262626;
+font-weight:300;
+margin-top:30px;
+
+}
+@media only screen and (max-width:600px)
+{
+
+    .copyRight
+    {
+        font-size:14px;;
+    }
+}
+
+
+
+
+
+

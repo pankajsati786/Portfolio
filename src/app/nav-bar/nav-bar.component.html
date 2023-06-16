@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg ">
+  <div class="mylogo">
+    <img  src="assets/1.png" alt="">
+  </div>
+ 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" [class.show]="isSideNavOpen">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#header" (click)="closeSideNav()">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutMe" (click)="closeSideNav()">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services" (click)="closeSideNav()">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" (click)="closeSideNav()">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#portfolio" (click)="closeSideNav()">Portfolio</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+  
