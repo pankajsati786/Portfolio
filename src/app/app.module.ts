@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { ServicesComponent } from './services/services.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GoogleSheetService } from './google-sheet.service';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,18 @@ import { GoogleSheetService } from './google-sheet.service';
     AboutComponent,
     PortfolioComponent,
     ContactFormComponent,
-    ServicesComponent
+    ServicesComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    FormsModule,  BrowserAnimationsModule,
+    HttpClientModule,ToastrModule.forRoot({
+      
+      positionClass: 'toast-bottom-center',
+      preventDuplicates: true,
+})
   ],
   providers: [GoogleSheetService],
   bootstrap: [AppComponent]
