@@ -5,7 +5,7 @@ import { ToastrService} from 'ngx-toastr';
   providedIn: 'root'
 })
 export class GoogleSheetsService {
-  private readonly url = 'https://sheetdb.io/api/v1/s7ecrw8abi9zz';
+  private readonly url = 'https://sheetdb.io/api/v1/mda9eetcxhdmd';
   
 
   constructor(private http: HttpClient,private toastr:ToastrService) {}
@@ -17,8 +17,7 @@ export class GoogleSheetsService {
 console.log(values)
     this.http.post(this.url, { data}).subscribe(
       response => {
-        this.toastr.success('Form data submitted successfully',
-        'success');
+        this.toastr.success('Form data submitted successfully.');
         console.log(response);
       },
       error => {
